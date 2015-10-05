@@ -33,7 +33,7 @@ getSomeJsonP = function () {
             //alert(json.podcasts[0].date);
             //
             var d, i;
-            for (i = 0; i < json.podcasts.length; i++) {
+            for (i = 0; i < json.name_of_item.length; i++) {
                 d = json.item[i];
                 document.getElementById('your_div').innerHTML +=  //write html to the page per jsonp item in the loop
                 'this is an item' + d.stuff;
