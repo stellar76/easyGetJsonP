@@ -1,4 +1,4 @@
-getSomeJsonP = function () {
+getSomeJsonP = function (apiUrl) {
     var $jsonp = (function () {
         var that = {};
         that.send = function (src, options) {
@@ -26,7 +26,7 @@ getSomeJsonP = function () {
             //
         return that;
     })();
-    $jsonp.send('your_jsonp_url', {
+    $jsonp.send(apiUrl, {
         callbackName: 'your_callback',
         onSuccess: function (json) {
             console.log('success!', json);
@@ -46,4 +46,4 @@ getSomeJsonP = function () {
         timeout: 5
     });
 }
-getSomeJsonP();
+getSomeJsonP('http://some.api.url');
